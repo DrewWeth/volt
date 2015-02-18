@@ -2,6 +2,7 @@
 class MainController < Volt::ModelController
   def index
     # Add code for when the index view is loaded
+
   end
 
   def about
@@ -9,9 +10,8 @@ class MainController < Volt::ModelController
   end
 
   def add_todo
-
-    page._todos << { name: page._new_todo }
-    print page._todos.inspect
+    store._todos << { name: page._new_todo }
+    print store._todos.inspect
     page._new_todo = ""
   end
 
